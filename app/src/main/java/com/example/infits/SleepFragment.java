@@ -8,10 +8,8 @@ import android.os.Bundle;
 
 import androidx.activity.OnBackPressedCallback;
 import androidx.annotation.Nullable;
-import androidx.cardview.widget.CardView;
 import androidx.core.content.res.ResourcesCompat;
 import androidx.fragment.app.Fragment;
-import androidx.navigation.Navigation;
 
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -19,8 +17,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.RadioButton;
-import android.widget.TextView;
-import android.widget.Toast;
 
 import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
@@ -37,10 +33,6 @@ import com.github.mikephil.charting.formatter.IndexAxisValueFormatter;
 import com.github.mikephil.charting.highlight.Highlight;
 import com.github.mikephil.charting.interfaces.datasets.ILineDataSet;
 import com.github.mikephil.charting.listener.OnChartValueSelectedListener;
-import com.jjoe64.graphview.GraphView;
-import com.jjoe64.graphview.helper.StaticLabelsFormatter;
-import com.jjoe64.graphview.series.DataPoint;
-import com.jjoe64.graphview.series.LineGraphSeries;
 import com.savvi.rangedatepicker.CalendarPickerView;
 
 import org.json.JSONArray;
@@ -94,7 +86,7 @@ public class SleepFragment extends Fragment {
             @Override
             public void handleOnBackPressed() {
                 requireActivity().finish();
-                startActivity(new Intent(getActivity(),DashBoardMain.class));
+                startActivity(new Intent(getActivity(), DashBoardMain.class));
             }
         };
         requireActivity().getOnBackPressedDispatcher().addCallback(this, callback);
